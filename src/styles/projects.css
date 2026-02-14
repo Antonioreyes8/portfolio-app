@@ -1,0 +1,28 @@
+.projects-container {
+  padding: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 250px);  /* 3 rows — adjust height as needed */
+  gap: 1rem;
+}
+
+.project-card {
+  background: black;
+  border: .5px solid white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 16px white;
+}
