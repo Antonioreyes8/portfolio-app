@@ -1,73 +1,68 @@
-.menu-item-about {
-	/*outline: 1px solid white;*/
-	background-color: #333;
-	width: 70%;
-	margin-bottom: 10px;
-	display: flex;
-	justify-content: center;
-}
-
-.menu-item-projects {
-	/*outline: 1px solid white;*/
-	background-color: #333;
-	width: 60%;
-	margin-bottom: 10px;
-	display: flex;
-	justify-content: center;
-}
-
-.menu-item-contact {
-	/*outline: 1px solid white;*/
-	background-color: #333;
-	width: 50%;
-	margin-bottom: 10px;
-	display: flex;
-	justify-content: center;
+/* Base styles (desktop) */
+.menu-container {
+	width: 30svw;
+	margin: 0 auto;
 }
 
 .menu-list {
-	/*outline: 1px solid white;*/
 	display: flex;
-	flex-direction: column;
-	list-style-type: none;
+	flex-direction: column; /* stacked vertically on desktop */
+	list-style: none;
 	padding: 0;
+	margin: 0;
 	width: 100%;
+	align-items: center; /* center the buttons horizontally */
+	gap: 10px; /* spacing between buttons */
 }
 
-.menu-container {
-	/*outline: 1px solid white;*/
-	width: 30svw;
-}
-
-.menu-item-about:hover,
-.menu-item-projects:hover,
-.menu-item-contact:hover {
-	background-color: #555;
-	cursor: pointer;
-	transform: scale(1.1);
-	transition: transform 0.5s ease, background-color 0.5s ease;
+.menu-list li {
+	width: 100%; /* full width of container for uniform size */
 }
 
 .menu-list li button {
-    background-color: #333;
-    padding: 30px;
+	background-color: #333;
+	padding: 30px;
 	cursor: pointer;
-	width: 100%;
-	height: 100%;
+	width: 100%; /* fill li width */
+	border: none;
+	border-radius: 8px;
+	color: white;
+	font-size: 1rem;
+	transition:
+		transform 0.3s ease,
+		background-color 0.3s ease;
 }
 
-/* Tablet breakpoint (and all smaller screens) */
-@media (max-width: 1024px) {
-    .menu-container {
-        width: 100svw; /* almost full width for tablet and below */
-    }
+.menu-list li button:hover {
+	background-color: #555;
+	transform: scale(1.05);
+}
 
-    .menu-list li button {
-        padding: 18px; /* smaller padding for tablet/mobile */
-        font-size: 1rem; /* adjust text size */
-    }
+/* Tablet / Mobile */
+@media (max-width: 1024px) {
+	.menu-container {
+		width: 100%; /* full width */
+		padding: 0 10px; /* safe padding */
+		overflow-x: hidden; /* prevent scroll if tiny overflow */
+	}
 
 	.menu-list {
 		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 10px; /* spacing between buttons */
+	}
+
+	.menu-list li {
+		flex: 1 1 calc(33% - 10px); /* 3 per row minus gap */
+		max-width: 200px; /* optional max width for very large screens */
+		margin-bottom: 10px;
+	}
+
+	.menu-list li button {
+		width: 100%; /* fill li */
+		padding: 15px; /* smaller padding on mobile */
+		font-size: 1rem;
 	}
 }

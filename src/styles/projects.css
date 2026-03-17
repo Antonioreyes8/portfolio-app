@@ -32,6 +32,10 @@
   height: auto;
 }
 
+.project-link {
+  text-decoration: none;
+}
+
 /* Tablet breakpoint (1024px and below) */
 @media (max-width: 1024px) {
   .projects-section {
