@@ -16,7 +16,7 @@ function About() {
 			</p>
 			<br />
 			<p className="about-text">
-				I've worked with Webflow, React, Tailwind, Python, Next.js. I usually
+				I have worked with Webflow, React, Tailwind, Python, Next.js. I usually
 				host all of my projects on Vercel, but I also have experience with
 				Netlify and AWS. I ususally use Supabase for my no-sql database needs
 				and I also have experience with mysql and postgresql.
