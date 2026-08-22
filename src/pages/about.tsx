@@ -9,23 +9,33 @@ function About() {
 				| 25 years old | English & Spanish
 			</div>
 			<p className="about-text">
-				Hello, welcome to my personal portfolio. I can work in both no-code and
-				code-based environments, and I have experience with a variety of tools
-				and technologies. I am passionate about creating beautiful and
-				functional websites.
+				I build software and web experiences that are fast, reliable, and
+				purposeful. I work across the full product lifecycle, from early design
+				concepts through production-ready architecture and implementation.
 			</p>
-			<br />
+
+			<div className="core-stack">
+				<h2>Core Stack:</h2>
+				<ul className="stack-list">
+					<li>
+						<span>Frontend:</span> React, Next.js, Tailwind CSS, JavaScript,
+						TypeScript
+					</li>
+					<li>
+						<span>Backend & Logic:</span> Python, REST APIs, Node.js
+					</li>
+					<li>
+						<span>Data & Storage:</span> Supabase, PostgreSQL, MySQL
+					</li>
+					<li>
+						<span>Cloud & Hosting:</span> Vercel, AWS, Netlify
+					</li>
+				</ul>
+			</div>
+
 			<p className="about-text">
-				I have worked with Webflow, React, Tailwind, Python, Next.js. I usually
-				host all of my projects on Vercel, but I also have experience with
-				Netlify and AWS. I ususally use Supabase for my no-sql database needs
-				and I also have experience with mysql and postgresql.
-			</p>
-			<br />
-			<p className="about-text">
-				I am always looking for new opportunities to learn and grow as a
-				developer. If you have any questions or would like to work together,
-				please feel free to contact me.
+				I'm always open to new software projects, freelance opportunities, and
+				technical collaborations. Feel free to reach out.
 			</p>
 		</section>
 	);

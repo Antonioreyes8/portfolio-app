@@ -2,7 +2,6 @@ import Header from "./sections/header";
 import Menu from "./sections/menu";
 import About from "./pages/about";
 import Projects from "./pages/projects";
-import Contact from "./pages/contact";
 
 import "./styles/projects.css";
 import "./styles/header.css";
@@ -44,7 +43,6 @@ function App() {
 						<Route index element={<About />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/projects" element={<Projects />} />
-						<Route path="/contact" element={<Contact />} />
 					</Routes>
 				</div>
 			</div>
