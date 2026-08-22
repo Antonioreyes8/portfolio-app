@@ -1,119 +1,233 @@
 /* Base styles (desktop first) */
 .projects-section {
-	padding: 2rem;
-	max-width: 1200px; /* desktop width */
-	margin: 0 auto;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .projects-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* desktop: 2 columns */
-	gap: 1rem;
-	justify-content: center; /* center grid in container */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; 
+    width: 100%;
 }
 
 .project-card {
-	background: black;
-	padding: 1.5rem;
-	border-radius: 8px;
-	text-align: center;
-	font-size: 1.1rem;
-	font-weight: 500;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	transition: box-shadow 0.2s ease;
-	border: 1px solid #222;
+    position: relative;
+    background: #000000;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #222;
+    width: 100%;
+    overflow: hidden; 
+    
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+/* ==========================================
+   🌟 HEAVY-DUTY PINNED STYLES (Cards 1 & 2)
+   ========================================== */
+.project-card.featured {
+    /* Thicker, solid white/silver border to stand out dramatically on absolute black */
+    border: 3px solid rgba(255, 255, 255, 0.6); 
+    background: #000000;
+    
+    /* Layered initial ambient glow so it pops even before hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05), 
+                inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+/* Pinned Badge - Aligned perfectly with thicker borders */
+.featured-badge {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    background: #ffffff;
+    color: #000000;
+    padding: 0.3rem 0.75rem;
+    border-radius: 4px;
+    font-weight: 900;
+    z-index: 3;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Glass Sweep Sheen Overlay */
+.project-card.featured::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.12) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.project-card.featured:hover::before {
+    left: 150%; 
+}
+
+/* 💥 EXTRA THICK / INTENSE GLOW HOVER FOR PINNED CARDS */
+.project-card.featured:hover {
+    border-color: #ffffff; /* Solid full-strength white border */
+    
+    /* Multi-layered dense shadow structure that pierces absolute black background */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25),   /* Core brilliant aura */
+                0 0 50px rgba(255, 255, 255, 0.1),    /* Soft broad fall-off bloom */
+                0 15px 35px rgba(0, 0, 0, 0.9);        /* Grounding ambient occlusion drop */
+                
+    transform: translateY(-6px) scale(1.015); 
+}
+
+.project-card.featured:hover .project-title {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+/* ==========================================
+   🚀 STANDARD INTERACTION RULES
+   ========================================== */
+.project-card:hover {
+    transform: translateY(-4px); 
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-image {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.04); 
 }
 
 .project-link {
-	text-decoration: none;
+    text-decoration: none;
+    width: 100%;
+    z-index: 1;
 }
 
-/* Overlay */
-.modal-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	z-index: 1000;
-}
-
-/* Modal box */
-.modal-content {
-	background: black;
-	padding: 2rem;
-	border-radius: 10px;
-	max-width: 500px;
-	width: 90%;
-	color: white;
-	position: relative;
-}
-
-/* Close button */
-.modal-close {
-	position: absolute;
-	top: 10px;
-	right: 12px;
-
-	background: none;
-	border: none;
-	color: white;
-	font-size: 1.2rem;
-	cursor: pointer;
+.project-title {
+    margin-top: 1.2rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.05em;
+    transition: text-shadow 0.3s ease;
 }
 
 .learn-more-btn {
-	background: none;
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-
-	padding: 0.4rem 0.9rem;
-	border-radius: 999px; /* 👈 makes it pill/circular */
-
-	font-size: 0.85rem;
-	cursor: pointer;
-	margin-top: 0.6rem;
-
-	transition: all 0.2s ease;
+    background: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    z-index: 2;
+    transition: all 0.2s ease;
 }
-/* Tablet breakpoint (1024px and below) */
+
+.learn-more-btn:hover {
+    background: white;
+    color: black;
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ==========================================
+   MODAL DIALOG LAYOUT
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #000000;
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    color: white;
+    position: relative;
+    border: 1px solid #333;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================== */
 @media (max-width: 1024px) {
-	.projects-section {
-		width: 90%; /* almost full width */
-		padding: 1.5rem;
-		display: flex;
-		flex-direction: column; /* stack content vertically */
-		align-items: center; /* center horizontally */
-		justify-content: center;
-		margin-top: 2rem; /* spacing below menu */
-	}
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
+    }
+}
 
-	.projects-grid {
-		width: 100%;
-		max-width: 600px; /* prevent it from being too wide */
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		grid-template-rows: auto;
-		gap: 1rem;
-		justify-items: center; /* center each card */
-	}
+@media (max-width: 600px) {
+    .projects-section {
+        padding: 1rem;
+    }
 
-	.project-card {
-		width: 100%; /* take full column width */
-		padding: 1rem;
-		font-size: 1rem;
-	}
+    .projects-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .project-card.featured:hover {
+        transform: translateY(-4px); 
+    }
 }

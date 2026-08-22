@@ -45,6 +45,20 @@ function Projects() {
             url: "https://www.momosconstruction.com/",
             description: "Construction company website with sleek UI.",
             tech: "Webflow"
+        },
+        {
+            src: "/project7.png",
+            title: "Aclean",
+            url: "https://aclean.space",
+            description: "Description for your seventh awesome project goes here.",
+            tech: "React, Next.js, Tailwind"
+        },
+        {
+            src: "/project8.png",
+            title: "Alcalas Renovations",
+            url: "https://alcalas-renovations.vercel.app/",
+            description: "Description for your eighth awesome project goes here.",
+            tech: "TypeScript, Node.js"
         }
     ];
 
@@ -52,7 +66,10 @@ function Projects() {
         <section className="projects-section">
             <div className="projects-grid">
                 {projects.map((project, i) => (
-                    <div key={i} className="project-card">
+                    /* Simply tags the first two indexes with 'featured' */
+                    <div key={i} className={`project-card ${i < 2 ? 'featured' : ''}`}>
+                        
+                        {i < 2 && <span className="featured-badge">PINNED</span>}
 
                         <a 
                             href={project.url} 
@@ -60,11 +77,13 @@ function Projects() {
                             rel="noopener noreferrer"
                             className="project-link"
                         >
-                            <img 
-                                src={project.src} 
-                                alt={project.title} 
-                                className="project-image"
-                            />
+                            <div className="image-wrapper">
+                                <img 
+                                    src={project.src} 
+                                    alt={project.title} 
+                                    className="project-image"
+                                />
+                            </div>
                             <h3 className="project-title">{project.title}</h3>
                         </a>
 
@@ -74,7 +93,6 @@ function Projects() {
                         >
                             Learn more
                         </button>
-
                     </div>
                 ))}
             </div>
