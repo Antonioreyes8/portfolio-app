@@ -9,17 +9,17 @@ function Projects() {
 			title: "The Warehouse Project",
 			url: "https://the-warehouse-project-sigma-six.vercel.app/",
 			description:
-				"A high-energy event discovery platform and digital showcase tailored for creative gatherings and live sets. Leverages a bold, brutalist-inspired user interface with responsive artist line-up grids, interactive schedule views, and mobile-first navigation.",
-			concepts: "UI/UX, Event Discovery, Responsive Design",
-			tech: "React, CSS",
+				"A high-energy event and artist discovery platform.",
+			concepts: "Artist profiles with OAuth secure login, admin profile management.",
+			tech: "React, CSS, Supabase",
 		},
 		{
 			src: "/project4.png",
 			title: "Surco.studio",
 			url: "https://surco.studio",
 			description:
-				"The official digital portfolio and identity site for Surco Studio, highlighting custom web design and brand systems. Built around an editorial design system with fluid typography, responsive modular grids, and polished layout transitions.",
-			concepts: "Portfolio, Branding, Editorial Design",
+				"Digital design studio with store for featured services",
+			concepts: "UI/UX design, service catalog",
 			tech: "React, CSS, Vercel",
 		},
 		{
@@ -27,35 +27,35 @@ function Projects() {
 			title: "Los Muchachos de Ritmo",
 			url: "https://cosas-reverberantes.vercel.app/",
 			description:
-				"An immersive audiovisual web experience engineered to translate rhythm and musical energy into interactive digital motion. Features custom CSS animations, dynamic visual states, and lightweight performance optimization built for seamless cross-device playback.",
-			concepts: "Interactive Motion, CSS Animations, Cross-device Performance",
-			tech: "React, CSS, Vercel",
+				"Collaborative recommendations platform for music, movies, etc.",
+			concepts: "REST API, simple UI",
+			tech: "React, CSS, Vercel, Supabase",
 		},
 				{
 			src: "/project3.png",
 			title: "Guestbook App",
 			url: "https://guestbook-app-alpha.vercel.app/",
 			description:
-				"A full-stack interactive guestbook built to bridge physical spaces with digital keepsakes. Features real-time photo and message submissions, cloud database synchronization, and instant feed hydration with zero-refresh state updates.",
+				"Full stack guestbook application with Supabase database integration.",
 			concepts: "Full-stack, Real-time, Cloud Database",
-			tech: "Next.js, API, Vercel",
+			tech: "Next.js, API, Vercel, Supabase",
 		},
 		{
 			src: "/project5.png",
 			title: "Dreambuilt",
 			url: "https://www.dreambuilt-gc.com/",
 			description:
-				"A comprehensive commercial and residential general contracting website powered by a custom CMS structure. Features dynamic project showcases, detailed service breakdowns, and optimized quote-request funnels designed to drive inbound client leads.",
-			concepts: "CMS, Lead Generation, Project Showcases",
-			tech: "Webflow",
+				"",
+			concepts: "CMS, Contact Funnel, Project Showcases",
+			tech: "React, Vercel",
 		},
 		{
 			src: "/project6.png",
 			title: "Momos Construction",
 			url: "https://www.momosconstruction.com/",
 			description:
-				"A modern construction portfolio platform built to highlight craftsmanship and streamline customer inquiries. Includes structured project categorization, before-and-after transformation galleries, and a frictionless contact funnel for residential builds.",
-			concepts: "Portfolio, Contact Funnel, Project Galleries",
+				"A modern construction portfolio platform built to highlight previous projects and streamline customer inquiries.",
+			concepts: "Contact Funnel, Project Galleries",
 			tech: "Webflow",
 		},
 		{
@@ -63,18 +63,18 @@ function Projects() {
 			title: "Aclean",
 			url: "https://aclean.space",
 			description:
-				"A complete web application and booking platform for residential cleaning services. Features an interactive, real-time quote calculator based on home specifications, customizable service tiers, and automated inquiry routing for client onboarding.",
-			concepts: "Booking Platform, Real-time Quote Calculator, Client Onboarding",
-			tech: "React, Next.js, Tailwind",
+				"A complete web application and booking platform for residential cleaning services.",
+			concepts: "Intuitive layout, Contact Funnel",
+			tech: "React, Tailwind",
 		},
 		{
 			src: "/project8.png",
 			title: "Alcalas Renovations",
 			url: "https://alcalas-renovations.vercel.app/",
 			description:
-				"A full-stack remodeling portfolio application developed to showcase interior and exterior renovation projects. Features dynamic project filtering, high-resolution media galleries, and structured consultation request forms built on a TypeScript backend.",
-			concepts: "Portfolio, Project Filtering, Consultation Forms",
-			tech: "TypeScript, Node.js",
+				"Portfolio website for a residential renovation company, showcasing past projects and services.",
+			concepts: "Clean simple design, responsive interface, Contact Funnel",
+			tech: "React, CSS, Vercel",
 		},
 	];
 
