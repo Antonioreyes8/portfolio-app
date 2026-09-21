@@ -123,11 +123,20 @@ function Projects() {
 						</button>
 
 						<h2>{projects[selectedProject].title}</h2>
-						<p>{projects[selectedProject].description}</p>
 						<p>
-							<strong>Key Concepts: </strong>{projects[selectedProject].concepts}</p>
+							<strong>Summary: </strong>
+							<br />
+							{projects[selectedProject].description}
+						</p>
 						<p>
-							<strong>Tech: </strong> {projects[selectedProject].tech}
+							<strong>Key Concepts: </strong> 
+							<br />
+							{projects[selectedProject].concepts}
+						</p>
+						<p>
+							<strong>Tech: </strong> 
+							<br />
+							{projects[selectedProject].tech}
 						</p>
 
 						<a
