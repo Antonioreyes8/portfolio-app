@@ -32,11 +32,7 @@ function About() {
 					</li>
 				</ul>
 			</div>
-
-			<p className="about-text">
-				I'm always open to new software projects, freelance opportunities, and
-				technical collaborations. Feel free to reach out.
-			</p>
+			
 		</section>
 	);
 }
