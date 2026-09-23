@@ -10,7 +10,7 @@ function Projects() {
 			url: "https://the-warehouse-project-sigma-six.vercel.app/",
 			description:
 				"A high-energy event and artist discovery platform.",
-			concepts: "Artist profiles with OAuth secure login, admin profile management.",
+			concepts: "Profile pages, CI/CD pipeline integration, Unit testing, REST API",
 			tech: "React, CSS, Supabase",
 		},
 		{
@@ -19,7 +19,7 @@ function Projects() {
 			url: "https://surco.studio",
 			description:
 				"Digital design studio with store for featured services",
-			concepts: "UI/UX design, service catalog",
+			concepts: "UI/UX design, Service catalog",
 			tech: "React, CSS, Vercel",
 		},
 		{
@@ -84,7 +84,7 @@ function Projects() {
 				{projects.map((project, i) => (
 					/* Simply tags the first two indexes with 'featured' */
 					<div key={i} className={`project-card ${i < 2 ? "featured" : ""}`}>
-						{i < 2 && <span className="featured-badge">PINNED</span>}
+						{i < 2 && <span className="featured-badge"></span>}
 
 						<button
 							type="button"
